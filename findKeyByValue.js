@@ -6,40 +6,29 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(words) {
-  const result = {};
-
-  for (let letter of words) {
-    if (letter === " ") {
-      continue;
-    }
-    //console.log(letter);
-    if (!result[letter]) {
-      result[letter] = 0;   //letter: 1
-    }
-    result[letter]++;
-    //console.log(result["K"]);
-
-  }
-  return result;
-};
 
 const findKeyByValue = function(object, value) {
+  //loop through the object (bestTV..)
+  for (const keys in object) { 
+    if (object[keys] === value) {
+      return keys;
+    }
 
 
 
-
-
-
+  }
 
 
 };
 
+//OBJECT
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
 };
 
+//TEST CASES
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sci_fi");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
