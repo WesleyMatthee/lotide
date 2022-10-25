@@ -1,33 +1,34 @@
-const assertArraysEqual = function(arr1, arr2) {
+// const assertArraysEqual = function(arr1, arr2) {
 
 
-  if (eqArrays(arr1, arr2)) {
+//   if (eqArrays(arr1, arr2)) {
 
-    console.log(`✅✅✅Assertion Passed: [${arr1}] === [${arr2}]`);
-  } else {
+//     console.log(`✅✅✅Assertion Passed: [${arr1}] === [${arr2}]`);
+//   } else {
 
-    console.log(`🛑🛑🛑Assertion Failed: [${arr1}] !== [${arr2}]`);
-  }
+//     console.log(`🛑🛑🛑Assertion Failed: [${arr1}] !== [${arr2}]`);
+//   }
 
-};
+// };
 
-const eqArrays = function(arr1, arr2) {
+// const eqArrays = function(arr1, arr2) {
 
-  //create a loop to iterate through the arrays
-  for (let i = 0; i < arr1.length; i++) {
+//   //create a loop to iterate through the arrays
+//   for (let i = 0; i < arr1.length; i++) {
 
-    if (arr1[i] !== arr2[i]) {
+//     if (arr1[i] !== arr2[i]) {
 
-      return false;
-    }
-  } return true;
-};
+//       return false;
+//     }
+//   } return true;
+// };
 
 
 
 //IT must return the middle elements on an array
 //make a middle function
 //find the even array
+//return the middle
 //find the odd array
 //return the middle
 const middle = function(array) {
@@ -48,11 +49,12 @@ const middle = function(array) {
 };
 
 
-//Test code
-const testSmallArray = [1];
-const testOddArray = [1, 2, 3];
-const testEvenArray = [1, 2, 3, 4, 5, 6];
-assertArraysEqual(middle(testSmallArray), []); //true
-assertArraysEqual(middle(testOddArray), [1]); //true
-assertArraysEqual(middle(testEvenArray), [2, 3]); //true
-// const testOddArray = [1, 2, 3]
+// //Test code
+// const testSmallArray = [1];
+// const testOddArray = [1, 2, 3];
+// const testEvenArray = [1, 2, 3, 4, 5, 6];
+// assertArraysEqual(middle(testSmallArray), []); //true
+// assertArraysEqual(middle(testOddArray), [1]); //true
+// assertArraysEqual(middle(testEvenArray), [2, 3]); //true
+
+module.exports = middle;
